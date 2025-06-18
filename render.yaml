@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: geeta-portfolio
+    env: docker
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: DB_CONNECTION
+        value: sqlite
+      - key: DB_DATABASE
+        value: /var/www/html/database/database.sqlite
+      - key: ADMIN_EMAIL
+        value: geetskuikel@gmail.com
+      - key: ADMIN_PASSWORD
+        value: SecureAdminPassword123
+
