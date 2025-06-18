@@ -16,4 +16,3 @@ services:
         value: geetskuikel@gmail.com
       - key: ADMIN_PASSWORD
         value: SecureAdminPassword123
-

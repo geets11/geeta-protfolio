@@ -44,10 +44,6 @@ RUN chown -R www-data:www-data /var/www/html \
 # Copy Apache configuration
 COPY docker/apache.conf /etc/apache2/sites-available/000-default.conf
 
-# Copy startup script
-COPY render-start.sh /usr/local/bin/render-start.sh
-RUN chmod +x /usr/local/bin/render-start.sh
-
 EXPOSE 80
 
-CMD ["/usr/local/bin/render-start.sh"]
+CMD ["apache2-foreground"]
