@@ -1,16 +1,13 @@
 {
   "name": "geeta-portfolio",
   "version": "1.0.0",
-  "description": "Personal Portfolio Website for Geeta Kuikel Neupane",
-  "private": true,
-  "type": "module",
+  "description": "Professional portfolio website for Geeta",
   "scripts": {
-    "build": "vite build",
-    "dev": "vite"
+    "dev": "php artisan serve",
+    "build": "echo 'Build completed'",
+    "start": "php artisan serve --host=0.0.0.0 --port=10000"
   },
-  "devDependencies": {
-    "axios": "^1.6.4",
-    "laravel-vite-plugin": "^1.0",
-    "vite": "^5.0"
-  }
+  "keywords": ["laravel", "portfolio", "php"],
+  "author": "Geeta",
+  "license": "MIT"
 }
