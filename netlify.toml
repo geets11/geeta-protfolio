@@ -1,28 +1,11 @@
 [build]
-  command = "chmod +x ./netlify-build.sh && ./netlify-build.sh"
+  command = "./build.sh"
   publish = "public"
 
 [build.environment]
   PHP_VERSION = "8.2"
-  APP_ENV = "production"
-  APP_DEBUG = "false"
-  DB_CONNECTION = "sqlite"
-  ADMIN_EMAIL = "geetskuikel@gmail.com"
-  ADMIN_PASSWORD = "12345678"
 
 [[redirects]]
   from = "/*"
   to = "/index.php"
   status = 200
-  conditions = {Role = ["admin"]}
-
-[[redirects]]
-  from = "/admin/*"
-  to = "/index.php"
-  status = 200
-
-[[redirects]]
-  from = "/*"
-  to = "/index.php"
-  status = 200
-  conditions = {file_exists = false}
